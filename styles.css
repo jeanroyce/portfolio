@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'Cozette';
+    src: url('assets/CozetteVector.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SymbolsNerdFontMono';
+    src: url('assets/SymbolsNerdFontMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    color-scheme: light dark;
+    --bg-color: light-dark(#fbf1c7, #282828);
+    --text-color: light-dark(#282828, #fbf1c7);
+    --surface0: light-dark(#ebdbb2, #3c3836);
+    --surface1: light-dark(#d5c4a1, #504945);
+    --blue: light-dark(#076678, #83a598);
+}
+
+.mobile-nav {
+    display: none;
+}
+
+html {
+    background: var(--bg-color);
+}
+
+* {
+    color: var(--text-color);
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Cozette', monospace;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0 auto;
+
+}
+
+main {
+    margin-inline: auto;
+    max-inline-size: 1000px;
+    padding-inline: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--surface0);
+    padding: 5px;
+}
+
+header nav {
+    flex: 1;
+}
+
+header button {
+    font-family: "SymbolsNerdFontMono";
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0 10px;
+}
+
+header button:hover {
+    cursor: pointer;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--surface1);
+    text-decoration: none;
+}
+
+.selected-nav {
+    background-color: var(--text-color);
+    color: var(--surface0);
+}
+
+header summary {
+    cursor: pointer;
+    list-style: none;
+    background-color: var(--surface0);
+    padding: 12px;
+}
+
+header summary::before {
+    font-family: "SymbolsNerdFontMono";
+    content: "󰍜 ";
+}
+
+header details[open] summary::before {
+    font-family: "SymbolsNerdFontMono";
+    content: " ";
+}
+
+header summary::-webkit-details-marker {
+    display: none;
+}
+
+header details {
+    position: relative;
+}
+
+header details nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    border: 1px solid var(--text-color)
+}
+
+#theme-toggle {
+    display: none;
+}
+
+
+
+main :is(h2, h3, a) {
+    color: var(--blue);
+}
+
+.avatar {
+    width: 100%;
+    height: 100px;
+    zoom: 150%;
+    margin-right: 20px;
+}
+
+.avatar img {
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 50% 60%;
+    /* background-color: white; */
+
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+}
+
+.about-me article {
+    max-width: 600px;
+}
+
+.card-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card :is(h3, h4, h5) {
+    margin: 0;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card {
+    background-color: var(--surface0);
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid var(--text-color);
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field input,
+.field textarea {
+    font: inherit;
+    padding: 10px 12px;
+    border: 1px solid var(--text-color);
+    /* border-radius: 8px; */
+    background: var(--surface1);
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: 2px solid var(--text-color);
+    border-color: var(--text-color);
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 10px 14px;
+    border: 1px solid var(--text-color);
+    background-color: var(--text-color);
+    color: var(--surface0);
+    font: inherit;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.submit-btn:focus {
+    outline: 2px solid var(--text-color);
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me article {
+        width: auto;
+    }
+
+    .avatar {
+        zoom: 80%;
+    }
+}

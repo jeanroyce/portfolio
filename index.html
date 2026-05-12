@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Royce - Portifólio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+  <header>
+    <!-- <details open> -->
+    <details id="mobile-menu" class="mobile-nav">
+      <summary>Menu</summary>
+      <nav>
+        <a class="selected-nav" href="/">Sobre mim</a>
+        <a href="/formacao.html">Formação</a>
+        <a href="/portifolio.html">Portifólio</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+    </details>
+
+    <nav class="desktop-nav">
+      <a class="selected-nav" href="/index.html">Sobre mim</a>
+      <a href="/formacao.html">Formação</a>
+      <a href="/portifolio.html">Portifólio</a>
+      <a href="/contato.html">Contato</a>
+
+    </nav>
+    <button id="theme-toggle"></button>
+  </header>
+
+  <main>
+    <h2>Sobre mim</h2>
+
+    <div class="about-me">
+      <div class="avatar"><img src="img/iRO_Wiki_Guard.gif" alt=""></div>
+
+      <article>
+        <h3>Me chamo Jean Royce</h3>
+
+        <p>Sou o tipo de pessoa que gosta de entender como as coisas funcionam de verdade e de encontrar maneiras
+          melhores
+          de resolver problemas no dia a dia.</p>
+        <p>Atualmente, atuo como analista de faturamento em uma indústria e estou em transição de carreira para a área
+          de
+          desenvolvimento, mas mesmo na minha função atual procuro aplicar essa mentalidade técnica criando fluxos de
+          trabalho, automatizações e soluções internas com Microsoft 365 e Power Automate.</p>
+        <p>Tenho grande interesse por tecnologia, automação, Linux e arquitetura de sistemas, sempre com uma preferência
+          por soluções enxutas, bem pensadas e realmente úteis.</p>
+        <p>Fora do trabalho, sou apaixonado por física, jogos e ficção científica — curiosidades que alimentam minha
+          vontade de explorar ideias, aprender coisas novas e enxergar a tecnologia de um jeito mais criativo.</p>
+        <p>Também gosto muito de projetos mais autorais e fora do comum, especialmente quando envolvem desenvolvimento
+          de
+          jogos, engines e experiências que exigem pensar além do caminho mais óbvio.</p>
+
+      </article>
+    </div>
+
+
+  </main>
+
+  <script src="scripts/theme-control.js"></script>
+  <script src="scripts/mobile-menu-control.js"></script>
 </body>
+
 </html>

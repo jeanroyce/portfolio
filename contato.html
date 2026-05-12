@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Royce - Portifólio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- <details open> -->
+    <details id="mobile-menu" class="mobile-nav">
+      <summary>Menu</summary>
+      <nav>
+        <a href="/">Sobre mim</a>
+        <a href="/formacao.html">Formação</a>
+        <a href="/portifolio.html">Portifólio</a>
+        <a class="selected-nav" href="/contato.html">Contato</a>
+      </nav>
+    </details>
+
+    <nav class="desktop-nav">
+      <a href="/index.html">Sobre mim</a>
+      <a href="/formacao.html">Formação</a>
+      <a href="/portifolio.html">Portifólio</a>
+      <a class="selected-nav" href="/contato.html">Contato</a>
+
+    </nav>
+    <button id="theme-toggle"></button>
+  </header>
+
+  <main>
+    <h2>Contato</h2>
+
+    <form id="contact">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div class="field">
+        <label for="message">Mensagem</label>
+        <textarea name="message" id="message" required></textarea>
+      </div>
+
+      <button class="submit-btn" type="submit">Enviar</button>
+    </form>
+
+
+  </main>
+
+  <script src="scripts/theme-control.js"></script>
+  <script src="scripts/mobile-menu-control.js"></script>
+  <script src="scripts/contact-form.js"></script>
+</body>
+
+</html>

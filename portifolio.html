@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean Royce - Portifólio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- <details open> -->
+    <details id="mobile-menu" class="mobile-nav">
+      <summary>Menu</summary>
+      <nav>
+        <a href="/">Sobre mim</a>
+        <a href="/formacao.html">Formação</a>
+        <a class="selected-nav" href="/portifolio.html">Portifólio</a>
+        <a href="/contato.html">Contato</a>
+      </nav>
+    </details>
+
+    <nav class="desktop-nav">
+      <a href="/index.html">Sobre mim</a>
+      <a href="/formacao.html">Formação</a>
+      <a class="selected-nav" href="/portifolio.html">Portifólio</a>
+      <a href="/contato.html">Contato</a>
+
+    </nav>
+    <button id="theme-toggle"></button>
+  </header>
+
+  <main>
+    <h2>Projetos</h2>
+
+    <section class="card-grid">
+      <article class="card">
+        <h3>Portifólio</h3>
+        <img class="card-image" src="img/portifolio.png" alt="">
+        <p>Aplicação web feita com HTML, CSS e JavaScript.</p>
+        <a href="/">Ver projeto</a>
+      </article>
+      <article class="card">
+        <h3>Portifólio</h3>
+        <img class="card-image" src="img/portifolio.png" alt="">
+        <p>Aplicação web feita com HTML, CSS e JavaScript.</p>
+        <a href="/">Ver projeto</a>
+      </article>
+    </section>
+
+  </main>
+
+  <script src="scripts/theme-control.js"></script>
+  <script src="scripts/mobile-menu-control.js"></script>
+</body>
+
+</html>
