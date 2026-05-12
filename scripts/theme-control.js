@@ -3,8 +3,7 @@ const themeToggleBtn = document.getElementById('theme-toggle');
 const mediaColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const THEME_STORAGE_KEY = 'theme';
 
-// Icones do botão de switch do 
-// dark e light mode da fonte NerdFont
+// Icones exibidos no toggle conforme o tema atualmente ativo
 const icons = {
     dark: '\uf186',
     light: '\uf522',
@@ -41,6 +40,7 @@ function toggleTheme() {
 }
 
 function handleSystemThemeChange() {
+    // Mantem o tema escolhido quando houve mudança manual
     if (!state.isThemeManual) {
         setTheme();
     }
@@ -60,6 +60,8 @@ function saveTheme(theme) {
 }
 
 function init() {
+    // Mostra o butão apenas quando o javascript estiver ativo,
+    // a pagina funciona de modo automatico caso não ativo.
     themeToggleBtn.style.display = 'block';
 
     loadSavedTheme();
